@@ -245,7 +245,7 @@ kernelku=$(uname -r)
 
 # DNS PATCH
 #tipeos2=$(uname -m)
-Name=$(curl -sS curl -sS ipinfo.io/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS curl -sS ipinfo.io/ip | grep $MYIP)
 Exp=$(curl -sS curl -sS ipinfo.io/ip | grep $MYIP | awk '{print $3}')
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"

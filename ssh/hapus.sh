@@ -22,7 +22,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS curl -sS ipinfo.io/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS curl -sS ipinfo.io/ip | grep $MYIP)
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS curl -sS ipinfo.io/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS curl -sS ipinfo.io/ip | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
