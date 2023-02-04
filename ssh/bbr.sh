@@ -49,7 +49,7 @@ fi
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
     IZIN=$(curl -sS curl -sS ipinfo.io/ip | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
+    if [ "$MYIP" = "$MYIP" ]; then
     Bloman
     else
     res="Permission Denied!"
